@@ -1,0 +1,20 @@
+version: "3.9"
+networks:
+  roboshop:
+    driver: bridge
+services:
+  web:
+    image: web:v1
+    container_name: web
+    depends_on:
+    - catalogue
+  mongodb:
+    image: mongodb:v1
+    container_name: mongodb
+  catalogue:
+    image: catalogue:v1
+    container_name: catalogue
+    depends_on:
+    - mongodb
+
+
