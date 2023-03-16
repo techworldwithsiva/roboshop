@@ -4,7 +4,7 @@ RUN adduser --system cart
 USER cart
 WORKDIR /opt/server
 COPY package.json /opt/server/
-
+RUN ls -lrt
 RUN npm install
 
 COPY server.js /opt/server/
