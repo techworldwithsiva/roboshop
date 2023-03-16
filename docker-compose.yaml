@@ -40,7 +40,7 @@ services:
     image: mysql:v1
     container_name: mysql
   shipping:
-    image: shipping:v1
+    image: shipping:v2
     container_name: shipping
     depends_on:
     - mysql
