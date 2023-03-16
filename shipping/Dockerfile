@@ -1,5 +1,5 @@
-FROM almalinux as builder
-RUN yum update -y && yum install maven -y
+FROM debian:10 AS build
+RUN apt-get update && apt-get -y install maven
 WORKDIR /opt/shipping
 COPY pom.xml /opt/shipping/
 RUN mvn dependency:resolve
