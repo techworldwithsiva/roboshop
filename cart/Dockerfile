@@ -7,8 +7,6 @@ USER cart
 COPY package.json /opt/server/
 RUN ls -lrt
 RUN npm install
-
 COPY server.js /opt/server/
-
 CMD ["node", "server.js"]
 
